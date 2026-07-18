@@ -1,0 +1,68 @@
+baseURL = 'https://zahidullah200.github.io/handy-experte-website/'
+languageCode = 'de'
+title = 'Handy Experte'
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[params]
+  env = 'production'
+  description = "Handy Experte - Ankauf, Verkauf, Reparatur und Zubehör für Handys in Ludwigshafen"
+  author = "Z. Shirzad"
+  DateFormat = "January 2, 2006"
+  defaultTheme = "auto"
+  ShowShareButtons = false
+  ShowReadingTime = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowRssButtonInSectionTermList = false
+  ShowToc = false
+
+  [params.homeInfoParams]
+    Title = "Handy Experte"
+    Content = "Ankauf • Verkauf • Reparatur • Handy Zubehör — Ludwigshafen"
+
+[[menu.main]]
+  identifier = "home"
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "mobiles"
+  name = "Mobiles"
+  url = "/mobiles/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "accessories"
+  name = "Accessories"
+  url = "/accessories/"
+  weight = 3
+
+[[menu.main]]
+  identifier = "sell"
+  name = "Sell Your Phone"
+  url = "/sell-your-phone/"
+  weight = 4
+
+[[menu.main]]
+  identifier = "repair"
+  name = "Repair Services"
+  url = "/repair-services/"
+  weight = 5
+
+[[menu.main]]
+  identifier = "contact"
+  name = "Contact"
+  url = "/contact/"
+  weight = 6
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
