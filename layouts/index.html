@@ -1,0 +1,108 @@
+{{ define "main" }}
+
+<section class="relative bg-dark text-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <p class="text-gold font-semibold tracking-widest uppercase text-sm mb-4">Ankauf • Verkauf • Reparatur • Zubehör</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">Your Trusted <span class="text-gold-gradient">Mobile Experts</span> in Ludwigshafen</h1>
+      <p class="text-white/70 text-lg mb-8">We buy, sell, and repair smartphones — plus a full range of accessories. Fast service, fair prices, guaranteed quality.</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="{{ with .Site.GetPage "/mobiles" }}{{ .RelPermalink }}{{ end }}" class="gold-gradient text-dark font-semibold px-7 py-3 rounded-full hover:opacity-90 transition">Browse Mobiles</a>
+        <a href="{{ with .Site.GetPage "/repair-services" }}{{ .RelPermalink }}{{ end }}" class="border border-gold text-gold font-semibold px-7 py-3 rounded-full hover:bg-gold hover:text-dark transition">Get a Repair Quote</a>
+      </div>
+    </div>
+    <div data-aos="fade-left">
+      <img src="{{ "images/homepageimage.png" | relURL }}" alt="Handy Experte" class="rounded-2xl shadow-2xl w-full object-cover">
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-8 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div data-aos="fade-up" class="flex flex-col items-center gap-2 text-center">
+      <i class="fa-solid fa-bolt text-gold text-2xl"></i>
+      <p class="font-semibold text-sm md:text-base">Fast Same-Day Service</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="100" class="flex flex-col items-center gap-2 text-center">
+      <i class="fa-solid fa-mobile-screen-button text-gold text-2xl"></i>
+      <p class="font-semibold text-sm md:text-base">All Major Brands</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="200" class="flex flex-col items-center gap-2 text-center">
+      <i class="fa-solid fa-hand-holding-dollar text-gold text-2xl"></i>
+      <p class="font-semibold text-sm md:text-base">Fair Trade-In Prices</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col items-center gap-2 text-center">
+      <i class="fa-solid fa-store text-gold text-2xl"></i>
+      <p class="font-semibold text-sm md:text-base">Walk-Ins Welcome</p>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 py-20">
+  <div class="text-center mb-14" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Our Services</h2>
+    <p class="text-gray-500">Everything you need for your smartphone, in one place.</p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div data-aos="fade-up" class="bg-white border border-gray-100 shadow-lg rounded-2xl p-8 text-center hover:-translate-y-2 transition-transform">
+      <div class="w-16 h-16 mx-auto mb-5 rounded-full gold-gradient flex items-center justify-center text-2xl text-dark"><i class="fa-solid fa-cart-shopping"></i></div>
+      <h3 class="font-bold text-lg mb-2">Ankauf</h3>
+      <p class="text-gray-500 text-sm">We buy your used smartphones at fair prices, on the spot.</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="100" class="bg-white border border-gray-100 shadow-lg rounded-2xl p-8 text-center hover:-translate-y-2 transition-transform">
+      <div class="w-16 h-16 mx-auto mb-5 rounded-full gold-gradient flex items-center justify-center text-2xl text-dark"><i class="fa-solid fa-tags"></i></div>
+      <h3 class="font-bold text-lg mb-2">Verkauf</h3>
+      <p class="text-gray-500 text-sm">Quality new and used phones, tested and ready to go.</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="200" class="bg-white border border-gray-100 shadow-lg rounded-2xl p-8 text-center hover:-translate-y-2 transition-transform">
+      <div class="w-16 h-16 mx-auto mb-5 rounded-full gold-gradient flex items-center justify-center text-2xl text-dark"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+      <h3 class="font-bold text-lg mb-2">Reparatur</h3>
+      <p class="text-gray-500 text-sm">Screen, battery, camera, and water damage repairs — fast.</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="300" class="bg-white border border-gray-100 shadow-lg rounded-2xl p-8 text-center hover:-translate-y-2 transition-transform">
+      <div class="w-16 h-16 mx-auto mb-5 rounded-full gold-gradient flex items-center justify-center text-2xl text-dark"><i class="fa-solid fa-plug"></i></div>
+      <h3 class="font-bold text-lg mb-2">Zubehör</h3>
+      <p class="text-gray-500 text-sm">Chargers, cases, earphones, cables, and more.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    <div data-aos="fade-right">
+      <img src="https://images.pexels.com/photos/10232658/pexels-photo-10232658.jpeg?auto=compress&cs=tinysrgb&w=1000" alt="Quality checked devices and parts" loading="lazy" class="rounded-2xl shadow-xl w-full object-cover h-full">
+    </div>
+    <div data-aos="fade-left">
+      <h2 class="text-3xl font-extrabold mb-6">Why Choose Handy Experte?</h2>
+      <ul class="space-y-5">
+        <li class="flex gap-4"><i class="fa-solid fa-bolt text-gold text-xl mt-1"></i><div><h4 class="font-semibold">Fast Turnaround</h4><p class="text-gray-500 text-sm">Most repairs completed same day.</p></div></li>
+        <li class="flex gap-4"><i class="fa-solid fa-shield-halved text-gold text-xl mt-1"></i><div><h4 class="font-semibold">Trusted & Reliable</h4><p class="text-gray-500 text-sm">Years of experience with all major brands.</p></div></li>
+        <li class="flex gap-4"><i class="fa-solid fa-hand-holding-dollar text-gold text-xl mt-1"></i><div><h4 class="font-semibold">Fair Prices</h4><p class="text-gray-500 text-sm">Transparent pricing, no hidden fees.</p></div></li>
+        <li class="flex gap-4"><i class="fa-solid fa-medal text-gold text-xl mt-1"></i><div><h4 class="font-semibold">Quality Guaranteed</h4><p class="text-gray-500 text-sm">All parts and devices checked before handover.</p></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 py-20">
+  <div class="text-center mb-14" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-3">In Store</h2>
+    <p class="text-gray-500">A look at our devices and accessories.</p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <img data-aos="zoom-in" src="https://images.pexels.com/photos/33104417/pexels-photo-33104417.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Smartphones" loading="lazy" class="rounded-xl shadow-md w-full aspect-square object-cover">
+    <img data-aos="zoom-in" data-aos-delay="100" src="https://images.pexels.com/photos/33298188/pexels-photo-33298188.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Accessories" loading="lazy" class="rounded-xl shadow-md w-full aspect-square object-cover">
+    <img data-aos="zoom-in" data-aos-delay="200" src="https://images.pexels.com/photos/6755075/pexels-photo-6755075.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Repairs" loading="lazy" class="rounded-xl shadow-md w-full aspect-square object-cover">
+    <img data-aos="zoom-in" data-aos-delay="300" src="https://images.pexels.com/photos/10104321/pexels-photo-10104321.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Our Store" loading="lazy" class="rounded-xl shadow-md w-full aspect-square object-cover">
+  </div>
+</section>
+
+<section class="gold-gradient">
+  <div class="max-w-5xl mx-auto px-6 py-16 text-center" data-aos="fade-up">
+    <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4">Ready to Buy, Sell, or Repair?</h2>
+    <p class="text-dark/80 mb-8">Visit us in-store or get in touch — we're here to help.</p>
+    <a href="{{ with .Site.GetPage "/contact" }}{{ .RelPermalink }}{{ end }}" class="bg-dark text-white font-semibold px-8 py-3 rounded-full hover:bg-black/80 transition inline-block">Contact Us</a>
+  </div>
+</section>
+
+{{ end }}

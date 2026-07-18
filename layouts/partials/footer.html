@@ -1,0 +1,33 @@
+<footer class="bg-dark text-white/80 mt-20">
+  <div class="max-w-7xl mx-auto px-6 py-14 grid md:grid-cols-3 gap-10">
+    <div>
+      <div class="flex items-center gap-3">
+        <img src="{{ "images/mobile_logo.png" | relURL }}" alt="Handy Experte Logo" class="h-10 w-auto">
+        <span class="text-2xl font-extrabold text-white">Handy <span class="text-gold-gradient">Experte</span></span>
+      </div>
+      <p class="mt-4 text-sm leading-relaxed">Ankauf • Verkauf • Reparatur • Handy Zubehör<br>Your trusted mobile shop in Ludwigshafen.</p>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-sm">
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL | relLangURL }}" class="hover:text-gold transition-colors">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4">Contact</h4>
+      <ul class="space-y-3 text-sm">
+        <li><i class="fa-solid fa-location-dot text-gold mr-2"></i>Bismarckstrasse 61, 67059 Ludwigshafen</li>
+        <li><i class="fa-solid fa-phone text-gold mr-2"></i><a href="tel:004915210448557" class="hover:text-gold">004915210448557</a></li>
+        <li><i class="fa-solid fa-envelope text-gold mr-2"></i><a href="mailto:handy.experte1.lu@gmail.com" class="hover:text-gold">handy.experte1.lu@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-xs text-white/50">
+    &copy; {{ now.Year }} Handy Experte. All rights reserved. Developed
+  </div>
+   <div class="border-t border-white/10 py-6 text-center text-xs text-white/50">
+     Developed by: Zahidullah Sherzad
+  </div>
+</footer>

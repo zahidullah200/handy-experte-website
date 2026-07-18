@@ -1,0 +1,35 @@
+<header class="bg-dark sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="{{ .Site.Home.RelPermalink }}" class="flex items-center gap-3">
+      <img src="{{ "images/mobile_logo.png" | relURL }}" alt="Handy Experte Logo" class="h-11 w-auto">
+      <span class="text-2xl font-extrabold text-white hidden sm:inline">Handy <span class="text-gold-gradient">Experte</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-8">
+      {{ range .Site.Menus.main }}
+      {{ if ne .Identifier "contact" }}
+      <a href="{{ .URL | relLangURL }}" class="font-medium transition-colors {{ if $.IsMenuCurrent "main" . }}text-gold{{ else }}text-white/90 hover:text-gold{{ end }}">{{ .Name }}</a>
+      {{ end }}
+      {{ end }}
+    </nav>
+    <a href="{{ with .Site.GetPage "/contact" }}{{ .RelPermalink }}{{ end }}" class="hidden md:inline-block gold-gradient text-dark font-semibold px-5 py-2 rounded-full hover:opacity-90 transition">Contact Us</a>
+    <button id="menu-btn" aria-label="Toggle menu" class="md:hidden text-white text-2xl"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-dark border-t border-gold/20 px-6 py-4 flex flex-col gap-4">
+    {{ range .Site.Menus.main }}
+    {{ if ne .Identifier "contact" }}
+    <a href="{{ .URL | relLangURL }}" class="mobile-nav-link font-medium transition-colors {{ if $.IsMenuCurrent "main" . }}text-gold{{ else }}text-white/90 hover:text-gold{{ end }}">{{ .Name }}</a>
+    {{ end }}
+    {{ end }}
+    <a href="{{ with .Site.GetPage "/contact" }}{{ .RelPermalink }}{{ end }}" class="mobile-nav-link gold-gradient text-dark font-semibold px-5 py-2.5 rounded-full text-center mt-1">Contact Us</a>
+  </div>
+</header>
+<script>
+  document.getElementById('menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+  document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+    link.addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.add('hidden');
+    });
+  });
+</script>
